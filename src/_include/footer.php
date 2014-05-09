@@ -5,7 +5,7 @@
 function show_footer()
 {
 	?>
-    <hr>
+    <!-- <hr>
     <small>
         <a class="title" href="https://github.com/realtimeprojects/quixplorer" target="_blank"> QuiXplorer Version 2.5.7</a>
    </small>
@@ -13,7 +13,7 @@ function show_footer()
    <?php show_login(); ?>
    </center>
    </body>
-   </html>
+   </html> -->
    <?php
 }
 

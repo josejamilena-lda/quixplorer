@@ -173,7 +173,7 @@ function print_table ($dir, $list)
 	// Modified
 		echo "<TD>".parse_file_date(get_file_date($dir,$item))."</TD>\n";
 	// Permissions
-		echo "<TD>";
+		/*echo "<TD>";
 		if (permissions_grant($dir, NULL, "change"))
 		{
 			echo "<A HREF=\"".make_link("chmod",$dir,$item)."\" TITLE=\"";
@@ -182,6 +182,7 @@ function print_table ($dir, $list)
 		echo parse_file_type($dir,$item).parse_file_perms(get_file_perms($dir,$item));
 		if (permissions_grant($dir, NULL, "change"))
 			echo "</A>";
+		*/
 		echo "</TD>\n";
 	// Actions
 		echo "<TD>\n<TABLE>\n";
@@ -248,13 +249,13 @@ function list_dir ( $dir )
 	echo "<BR><TABLE width=\"95%\"><TR><TD><TABLE><TR>\n";
 
 	// PARENT DIR
-	echo "<TD><A HREF=\"".make_link("list", path_up($dir), NULL)."\">";
-	echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["up"]."\" ";
-	echo "ALT=\"".$GLOBALS["messages"]["uplink"]."\" TITLE=\"".$GLOBALS["messages"]["uplink"]."\"></A></TD>\n";
+	//echo "<TD><A HREF=\"".make_link("list", path_up($dir), NULL)."\">";
+	//echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["up"]."\" ";
+	//echo "ALT=\"".$GLOBALS["messages"]["uplink"]."\" TITLE=\"".$GLOBALS["messages"]["uplink"]."\"></A></TD>\n";
 	// HOME DIR
-	echo "<TD><A HREF=\"".make_link("list",NULL,NULL)."\">";
-	echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["home"]."\" ";
-	echo "ALT=\"".$GLOBALS["messages"]["homelink"]."\" TITLE=\"".$GLOBALS["messages"]["homelink"]."\"></A></TD>\n";
+	//echo "<TD><A HREF=\"".make_link("list",NULL,NULL)."\">";
+	//echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["home"]."\" ";
+	//echo "ALT=\"".$GLOBALS["messages"]["homelink"]."\" TITLE=\"".$GLOBALS["messages"]["homelink"]."\"></A></TD>\n";
 	// RELOAD
 	echo "<TD><A HREF=\"javascript:location.reload();\"><IMG border=\"0\" width=\"16\" height=\"16\" ";
 	echo "align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["reload"]."\" ALT=\"".$GLOBALS["messages"]["reloadlink"];
@@ -286,10 +287,10 @@ function list_dir ( $dir )
 		_print_link("logout", true, $dir, NULL);
 	}
 
-	echo "<TD>::</TD>";
+	//echo "<TD>::</TD>";
 	//Languages
 
-
+    /*
 	foreach($GLOBALS["langs"] as $langs) {
 
 		echo "<TD><A HREF=\"".make_link("list",$dir,NULL,NULL,NULL,$langs[0])."\">";
@@ -306,23 +307,25 @@ function list_dir ( $dir )
 		}
 
 		//list($slang,$img,$ext,$type)	= $mime;
-		/*if(@eregi($ext,$item)) {
-			$mime_type	= $desc;
-			$image		= $img;
-			if($query=="img"){ return $image;}
-			else if($query=="ext"){ return $type;}
-			else return $mime_type;
-		*/
+		//if(@eregi($ext,$item)) {
+		//	$mime_type	= $desc;
+		//	$image		= $img;
+		//	if($query=="img"){ return $image;}
+		//	else if($query=="ext"){ return $type;}
+		//	else return $mime_type;
+		//
 
 		}
+    */
 
 
 	//
-
+    /*
 	echo "</TR></TABLE></TD>\n";
-
+    */
 	// Create File / Dir
-	if (permissions_grant($dir, NULL, "create"))
+	/*
+    if (permissions_grant($dir, NULL, "create"))
 	{
 		echo "<TD align=\"right\"><TABLE><FORM action=\"".make_link("mkitem",$dir,NULL)."\" method=\"post\">\n<TR><TD>";
 		echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["add"]."\" />";
@@ -335,7 +338,7 @@ function list_dir ( $dir )
 	}
 
 	echo "</TR></TABLE>\n";
-
+    */
 	// End Toolbar
 
 
@@ -362,7 +365,7 @@ function list_dir ( $dir )
 	if($GLOBALS["order"]=="mod") $new_srt = $_srt;	else $new_srt = "yes";
 	echo "<A href=\"".make_link("list",$dir,NULL,"mod",$new_srt)."\">".$GLOBALS["messages"]["modifheader"];
 	if($GLOBALS["order"]=="mod") echo $_img;
-	echo "</A></B></TD><TD WIDTH=\"8%\" class=\"header\"><B>".$GLOBALS["messages"]["permheader"]."</B>\n";
+	/*echo "</A></B></TD><TD WIDTH=\"8%\" class=\"header\"><B>".$GLOBALS["messages"]["permheader"]."</B>\n";*/
 	echo "</TD><TD WIDTH=\"6%\" class=\"header\"><B>".$GLOBALS["messages"]["actionheader"]."</B></TD></TR>\n";
 	echo "<TR><TD colspan=\"7\"><HR></TD></TR>\n";
 

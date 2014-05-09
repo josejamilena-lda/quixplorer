@@ -14,7 +14,7 @@ function permissions_get ()
 			"read"		=> 0x0001,
 			"create"	=> 0x0002,
 			"change"	=> 0x0004,
-			"delete"	=> 0x0008,
+			"delete"	=> 0x0020,/*0x0008,*/
 			"password"	=> 0x0040,
 			"admin"		=> 0x8000,	// admin
 			);

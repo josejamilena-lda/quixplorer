@@ -64,10 +64,10 @@ function show_header($title, $additional_header_content = null)
     if ($additional_header_content != null)
         echo $additional_header_content;
 
-	echo "</head>\n<body><center>\n<table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\"><tbody>\n";
-	echo "<tr><td class=\"title\">";
-	if($GLOBALS["require_login"] && isset($GLOBALS['__SESSION']["s_user"])) echo "[".$GLOBALS['__SESSION']["s_user"]."] - ";
-	echo $title."</td></tr></tbody></table>\n\n";
+	//echo "</head>\n<body><center>\n<table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\"><tbody>\n";
+	//echo "<tr><td class=\"title\">";
+	//if($GLOBALS["require_login"] && isset($GLOBALS['__SESSION']["s_user"])) echo "[".$GLOBALS['__SESSION']["s_user"]."] - ";
+	//echo $title."</td></tr></tbody></table>\n\n";
 }
 //------------------------------------------------------------------------------
 ?>
